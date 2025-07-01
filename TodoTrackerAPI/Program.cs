@@ -1,4 +1,3 @@
-using System.Data.Entity;
 using System.Text.Json.Serialization;
 using TodoTrackerAPI.Contexts;
 
@@ -15,6 +14,7 @@ builder.Services.AddScoped<TodoContext>();
 
 builder.Services.AddControllers().AddJsonOptions(
     options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 
 var app = builder.Build();
 
